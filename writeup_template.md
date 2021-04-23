@@ -81,6 +81,15 @@ Here is an example of an original image and an augmented image:
 
 The difference between the original data set and the augmented data set is the following ... 
 
+![Ratation20Degrees](./writeup_images/Rotate20degrees.png)
+![Brightness](./writeup_images/Brightness.png)
+![Translation](./writeup_images/Translation.png.png)
+![AffineTransform](./writeup_images/AffineTransform.png)
+
+
+
+
+
 
 #### 2. Describe what your final model architecture looks like including model type, layers, layer sizes, connectivity, etc.) Consider including a diagram and/or table describing the final model.
 
