@@ -83,7 +83,7 @@ The difference between the original data set and the augmented data set is the f
 
 ![Ratation20Degrees](./writeup_images/Rotate20degrees.png)
 ![Brightness](./writeup_images/Brightness.png)
-![Translation](./writeup_images/Translation.png.png)
+![Translation](./writeup_images/Translation.png)
 ![AffineTransform](./writeup_images/AffineTransform.png)
 
 
