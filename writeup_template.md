@@ -63,17 +63,31 @@ Here is an exploratory visualization of the data set. It is a bar chart showing 
 
 #### 1. Describe how you preprocessed the image data. What techniques were chosen and why did you choose these techniques? Consider including images showing the output of each preprocessing technique. Pre-processing refers to techniques such as converting to grayscale, normalization, etc. (OPTIONAL: As described in the "Stand Out Suggestions" part of the rubric, if you generated additional data for training, describe why you decided to generate additional data, how you generated the data, and provide example images of the additional data. Then describe the characteristics of the augmented training set like number of images in the set, number of images for each class, etc.)
 
-As a first step, I decided to convert the images to grayscale because ...
+As a first step, I decided to convert the images to grayscale because usually 
+convolutions may capture patterns better from one channel data (reduce noise from the RGB data)
 
 Here is an example of a traffic sign image before and after grayscaling.
 
+**TODO**
 ![alt text][image2]
 
-As a last step, I normalized the image data because ...
+As a next step, I normalized the image data because normalization is an important step which ensures that each input parameter (pixel, in this case) has a similar data distribution. This makes convergence faster while training the network.
 
-I decided to generate additional data because ... 
+I decided to generate additional data because original images may not capture all the patterns and I wanted the model generalize better . To consider various situations I have converted images: 
 
-To add more data to the the data set, I used the following techniques because ... 
+-1. **Rotated** images by various angles (+- 20 degrees).Camera can see the images from various angles.
+-2. Model shouldbe robust with various **brightness** levels 
+-3. Translations - models traffic signs at **different positions** on the picture
+-4. Applied **affine transformations**. Affine Transformation helps to modify the geometric structure of the image, preserving parallelism of lines, but not the lengths and angles. It preserves collinearity and ratios of distances.
+
+
+I have applied combinations of all these techniques to the same image during the augmantation process. 
+We have imbalanced dataset. it means that classes are not equaly distributed
+
+
+To fix this i have developed several methods:
+
+- Add images to complete number of images of certain to the certain level. 
 
 Here is an example of an original image and an augmented image:
 
@@ -81,14 +95,14 @@ Here is an example of an original image and an augmented image:
 
 The difference between the original data set and the augmented data set is the following ... 
 
+**Images Rotation**
 ![Ratation20Degrees](./writeup_images/Rotate20degrees.png)
+**Brightness**
 ![Brightness](./writeup_images/Brightness.png)
+**TRanslation**
 ![Translation](./writeup_images/Translation.png)
+**Affine transformation**
 ![AffineTransform](./writeup_images/AffineTransform.png)
-
-
-
-
 
 
 #### 2. Describe what your final model architecture looks like including model type, layers, layer sizes, connectivity, etc.) Consider including a diagram and/or table describing the final model.
@@ -116,17 +130,14 @@ My final model consisted of the following layers:
 
 #### 3. Describe how you trained your model. The discussion can include the type of optimizer, the batch size, number of epochs and any hyperparameters such as learning rate.
 
-To train the model, I used an ....
+To train the model, I used the following parameters:
 
 
-- EPOCHS = 150
+- EPOCHS = 150. Have tried various number of epochs. larger number of epochs do not give any improvement in the quality of the model.
 - BATCH_SIZE = 128
-- rate = 0.001
-- mean(cross_entropy)
-- optimizer AdamOptimizer
-
-
-
+- rate = 0.01/0.001. Have applied dynamic learning metric ( larger on the initial stages and lower on the later stages of thelearning process)
+- mean(cross_entropy) as the metric which shoud be optimized.
+- Adam Optimizer
 
 
 #### 4. Describe the approach taken for finding a solution and getting the validation set accuracy to be at least 0.93. Include in the discussion the results on the training, validation and test sets and where in the code these were calculated. Your approach may have been an iterative process, in which case, outline the steps you took to get to the final solution and why you chose those steps. Perhaps your solution involved an already well known implementation or architecture. In this case, discuss why you think the architecture is suitable for the current problem.
@@ -138,13 +149,18 @@ My final model results were:
 
 If an iterative approach was chosen:
 * What was the first architecture that was tried and why was it chosen?
+
+- Haven't changed the arcitecture of the a model too much.
+
 * What were some problems with the initial architecture?
 * How was the architecture adjusted and why was it adjusted? Typical adjustments could include choosing a different model architecture, adding or taking away layers (pooling, dropout, convolution, etc), using an activation function or changing the activation function. One common justification for adjusting an architecture would be due to overfitting or underfitting. A high accuracy on the training set but low accuracy on the validation set indicates over fitting; a low accuracy on both sets indicates under fitting.
+
 * Which parameters were tuned? How were they adjusted and why?
+
 * What are some of the important design choices and why were they chosen? For example, why might a convolution layer work well with this problem? How might a dropout layer help with creating a successful model?
 
 If a well known architecture was chosen:
-* What architecture was chosen?
+* What architecture was chosen? LeNet
 * Why did you believe it would be relevant to the traffic sign application?
 * How does the final model's accuracy on the training, validation and test set provide evidence that the model is working well?
  
