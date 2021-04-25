@@ -53,7 +53,12 @@ signs data set:
 
 #### 2. Include an exploratory visualization of the dataset.
 
-Here is an exploratory visualization of the data set. It is a bar chart showing how the data ...
+Let's look how the data looks like
+The below plot shows randomimages for each class
+
+![Distribution](./writeup_images/alleexamples.png)
+
+Here is an exploratory visualization of the data set. It is a bar chart showing how the data is distributed
 
 ![Distribution](./writeup_images/imagesdistibution.png)
 
@@ -150,17 +155,26 @@ My final model results were:
 If an iterative approach was chosen:
 * What was the first architecture that was tried and why was it chosen?
 
-- Haven't changed the arcitecture of the a model too much.
+I have used LeNet() arcitecture from the very beginning.
+Haven't changed the arcitecture of the a model too much.
+Mainly was focused on hyperparameters tunning (num epochs, 
 
 * What were some problems with the initial architecture?
 * How was the architecture adjusted and why was it adjusted? Typical adjustments could include choosing a different model architecture, adding or taking away layers (pooling, dropout, convolution, etc), using an activation function or changing the activation function. One common justification for adjusting an architecture would be due to overfitting or underfitting. A high accuracy on the training set but low accuracy on the validation set indicates over fitting; a low accuracy on both sets indicates under fitting.
 
 * Which parameters were tuned? How were they adjusted and why?
 
+- Number of epochs has been changed from 128 to 256 
+
+
 * What are some of the important design choices and why were they chosen? For example, why might a convolution layer work well with this problem? How might a dropout layer help with creating a successful model?
 
 If a well known architecture was chosen:
 * What architecture was chosen? LeNet
+
+I have tried this architecture as it has been used for similar problems before (for classification problems in particular)
+
+
 * Why did you believe it would be relevant to the traffic sign application?
 * How does the final model's accuracy on the training, validation and test set provide evidence that the model is working well?
  
