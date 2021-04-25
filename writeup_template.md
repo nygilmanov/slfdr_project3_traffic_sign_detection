@@ -193,8 +193,10 @@ I have tried this architecture as it has been used for similar problems before (
 
 Here are five German traffic signs that I found on the web:
 
-![alt text][image4] ![alt text][image5] ![alt text][image6] 
-![alt text][image7] ![alt text][image8]
+
+![GrayScale](./writeup_images/5RandomImages.png)
+
+
 
 The first image might be difficult to classify because ...
 
