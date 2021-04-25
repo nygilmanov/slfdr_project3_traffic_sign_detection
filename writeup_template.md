@@ -83,10 +83,10 @@ As a next step, I normalized the image data because normalization is an importan
 
 I decided to generate additional data because original images may not capture all the patterns and I wanted the model generalize better . To consider various situations I have converted images: 
 
-- 1. Rotated images by various angles (+- 20 degrees).Camera can see the images from various angles.
-- 2. Model shouldbe robust with various brightness levels 
-- 3. Translations - models traffic signs at different positions on the picture
-- 4. Applied affine transformations. Affine Transformation helps to modify the geometric structure of the image, preserving parallelism of lines, but not the lengths and angles. It preserves collinearity and ratios of distances.
+-  Rotated images by various angles (+- 20 degrees).Camera can see the images from various angles.
+-  Model shouldbe robust with various brightness levels 
+-  Translations - models traffic signs at different positions on the picture
+-  Applied affine transformations. Affine Transformation helps to modify the geometric structure of the image, preserving parallelism of lines, but not the lengths and angles. It preserves collinearity and ratios of distances.
 
 
 I have applied combinations of all these techniques to the same image during the augmantation process. 
