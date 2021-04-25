@@ -79,7 +79,7 @@ Here is an example of a traffic sign image before and after grayscaling.
 
 As a next step, I normalized the image data because normalization is an important step which ensures that each input parameter (pixel, in this case) has a similar data distribution. This makes convergence faster while training the network.
 
-I decided to generate additional data because original images may not capture all the patterns and I wanted the model generalize better . To consider various situations I have converted images: 
+I decided to generate additional data because original images may not capture all the patterns and I wanted the model generalize better . To consider various situations I have converted images in the following way: 
 
 -  Rotated images by various angles (+- 20 degrees).Camera can see the images from various angles.
 -  Model shouldbe robust with various brightness levels 
