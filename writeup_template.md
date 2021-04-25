@@ -62,6 +62,7 @@ Here is an exploratory visualization of the data set. It is a bar chart showing 
 
 ![Distribution](./writeup_images/imagesdistibution.png)
 
+
 ### Design and Test a Model Architecture
 
 **TODO**
@@ -92,21 +93,26 @@ We have imbalanced dataset. it means that classes are not equaly distributed
 
 To fix this i have developed several methods:
 
-- Add images to complete number of images of certain to the certain level. 
+- Add images to complete number of images of certain class to the certain level. 
 
 Here is an example of an original image and an augmented image:
 
-![alt text][image3]
-
 The difference between the original data set and the augmented data set is the following ... 
 
-**Images Rotation**
+Images Rotation
+
 ![Ratation20Degrees](./writeup_images/Rotate20degrees.png)
-**Brightness**
+
+Brightness
+
 ![Brightness](./writeup_images/Brightness.png)
-**TRanslation**
+
+TRanslation
+
 ![Translation](./writeup_images/Translation.png)
-**Affine transformation**
+
+Affine transformation
+
 ![AffineTransform](./writeup_images/AffineTransform.png)
 
 
