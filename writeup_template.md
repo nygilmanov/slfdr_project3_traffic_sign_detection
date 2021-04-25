@@ -82,22 +82,25 @@ As a next step, I normalized the image data because normalization is an importan
 I decided to generate additional data because original images may not capture all the patterns and I wanted the model generalize better . To consider various situations I have converted images in the following way: 
 
 -  Rotated images by various angles (+- 20 degrees). Camera can see the images from various angles.
--  Model shouldbe robust with various brightness levels 
+-  Model should be robust with various brightness levels 
 -  Translations - models traffic signs at different positions on the picture
 -  Applied affine transformations. Affine Transformation helps to modify the geometric structure of the image, preserving parallelism of lines, but not the lengths and angles. It preserves collinearity and ratios of distances.
 
 
-I have applied combinations of all these techniques to the same image during the augmantation process. 
-We have imbalanced dataset. it means that classes are not equaly distributed
+I have applied combinations of all these techniques to the same image during the augmantation process using random factor
 
+This means that to some of the images for instance i have applied brightness transformation and then affine_transformation.
+For other images i could apply other sequences of trnasformations. 
+Images which were selected for certain tranformations sequences are defined by random factor
+
+We have imbalanced dataset. it means that classes are not equaly distributed
 
 To fix this i have developed several methods:
 
-- Add images to complete number of images of certain class to the certain level. 
+- Add images to complete number of images of certain class to the certain level (N_Images) 
 
-Here is an example of an original image and an augmented image:
 
-The difference between the original data set and the augmented data set is the following ... 
+Here are possible combinations augmented images.
 
 Images Rotation
 
@@ -145,9 +148,9 @@ To train the model, I used the following parameters:
 
 - EPOCHS = 150. Have tried various number of epochs. larger number of epochs do not give any improvement in the quality of the model.
 - BATCH_SIZE = 128
-- rate = 0.01/0.001. Have applied dynamic learning metric ( larger on the initial stages and lower on the later stages of thelearning process)
+- rate = 0.01/0.001. Have applied dynamic learning metric (larger on the initial stages and lower on the later stages of the learning process)
 - mean(cross_entropy) as the metric which shoud be optimized.
-- Adam Optimizer
+- Adam as an optimizer
 
 
 #### 4. Description of the approach taken for finding a solution and getting the validation set accuracy to be at least 0.93. Include in the discussion the results on the training, validation and test sets and where in the code these were calculated. Your approach may have been an iterative process, in which case, outline the steps you took to get to the final solution and why you chose those steps. Perhaps your solution involved an already well known implementation or architecture. In this case, discuss why you think the architecture is suitable for the current problem.
