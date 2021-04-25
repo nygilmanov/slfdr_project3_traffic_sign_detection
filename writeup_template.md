@@ -81,7 +81,7 @@ As a next step, I normalized the image data because normalization is an importan
 
 I decided to generate additional data because original images may not capture all the patterns and I wanted the model generalize better . To consider various situations I have converted images in the following way: 
 
--  Rotated images by various angles (+- 20 degrees).Camera can see the images from various angles.
+-  Rotated images by various angles (+- 20 degrees). Camera can see the images from various angles.
 -  Model shouldbe robust with various brightness levels 
 -  Translations - models traffic signs at different positions on the picture
 -  Applied affine transformations. Affine Transformation helps to modify the geometric structure of the image, preserving parallelism of lines, but not the lengths and angles. It preserves collinearity and ratios of distances.
