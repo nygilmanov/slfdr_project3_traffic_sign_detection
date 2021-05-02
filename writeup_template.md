@@ -8,6 +8,8 @@
 
 **Build a Traffic Sign Recognition Project**
 
+**SECTION DONE**
+
 The goals / steps of this project are the following:
 * Load the data set (see below for links to the project data set)
 * Explore, summarize and visualize the data set
@@ -42,6 +44,8 @@ You're reading it! and here is a link to my [project code](https://github.com/ud
 
 #### 1. Basic summary of the data set. 
 
+**SECTION DONE**
+
 I used the pandas library to calculate summary statistics of the traffic
 signs data set:
 
@@ -52,6 +56,8 @@ signs data set:
 * The number of unique classes/labels in the data set is 43
 
 #### 2. Exploratory visualization of the dataset.
+
+**SECTION DONE**
 
 Let's look how the data looks like
 The below plot shows randomimages for each class
@@ -65,14 +71,13 @@ Here is an exploratory visualization of the data set. It is a bar chart showing 
 
 ### Design and Test a Model Architecture
 
-**TODO**
+**SECTION DONE**
 
 As a first step, I decided to convert the images to grayscale because usually 
 convolutions may capture patterns better from one channel data (reduce noise from the RGB data)
 
 Here is an example of a traffic sign image before and after grayscaling.
 
-**TODO**
 
 ![GrayScale](./writeup_images/Grayscale.png)
 
@@ -121,6 +126,8 @@ Affine transformation
 
 #### 2. Final model architecture (model type, layers, layer sizes, connectivity, etc.) 
 
+
+
 My final model consisted of the following layers:
 
 | Layer         		|     Description	        									| 
@@ -156,23 +163,25 @@ To train the model, I used the following parameters:
 #### 4. Description of the approach taken for finding a solution and getting the validation set accuracy to be at least 0.93. Include in the discussion the results on the training, validation and test sets and where in the code these were calculated. Your approach may have been an iterative process, in which case, outline the steps you took to get to the final solution and why you chose those steps. Perhaps your solution involved an already well known implementation or architecture. In this case, discuss why you think the architecture is suitable for the current problem.
 
 My final model results were:
-* training set accuracy of ?
-* validation set accuracy of ? 
-* test set accuracy of ?
+**TODO**
+* training set accuracy of 1.00 
+* validation set accuracy 0.951
+* test set accuracy of 0.933
 
+**DONE**
 If an iterative approach was chosen:
 * What was the first architecture that was tried and why was it chosen?
 
 I have used LeNet() arcitecture from the very beginning.
 Haven't changed the arcitecture of the a model too much.
-Mainly was focused on hyperparameters tunning (num epochs, 
+Mainly was focused on hyperparameters tunning (num epochs,batch size etc.)
 
 * What were some problems with the initial architecture?
 * How was the architecture adjusted and why was it adjusted? Typical adjustments could include choosing a different model architecture, adding or taking away layers (pooling, dropout, convolution, etc), using an activation function or changing the activation function. One common justification for adjusting an architecture would be due to overfitting or underfitting. A high accuracy on the training set but low accuracy on the validation set indicates over fitting; a low accuracy on both sets indicates under fitting.
 
 * Which parameters were tuned? How were they adjusted and why?
 
-- Number of epochs has been changed from 128 to 256 
+- Number of epochs has been changed from 128 to 256. Finally has stopped with batch size 128 as was getting the higher performance.
 
 
 * What are some of the important design choices and why were they chosen? For example, why might a convolution layer work well with this problem? How might a dropout layer help with creating a successful model?
@@ -180,8 +189,8 @@ Mainly was focused on hyperparameters tunning (num epochs,
 If a well known architecture was chosen:
 * What architecture was chosen? LeNet
 
-I have tried this architecture as it has been used for similar problems before (for classification problems in particular)
-
+I have tried LeNet architecture as it has been used for similar problems before (for classification problems in particular)
+I have got quite good results on the validation and test sets as can be seen above.
 
 * Why did you believe it would be relevant to the traffic sign application?
 * How does the final model's accuracy on the training, validation and test set provide evidence that the model is working well?
@@ -206,31 +215,28 @@ Here are the results of the prediction:
 
 | Image			          |     Prediction	        					| 
 |:---------------------:  |:---------------------------------------------:| 
-| Speed limit (50km/h)-2  | check1   									| 
-| Go straight or left-37  | check2 										|
-| Ahead only-35		      | check3											|
-| Stop-14	      		  | check4					 				|
-| Speed limit (80km/h)-5  | check5      							|
+| Speed limit (50km/h)-2  | Speed limit (30km/h)-1   						| 
+| Go straight or left-37  | Go straight or left-37 							|
+| Stop-14		          | Yield-13										|
+| Ahead only-35			  | Ahead only-35					 				|
+| Speed limit (80km/h)-5  | Speed limit (30km/h)   							|
 
 
 The model was able to correctly guess 4 of the 5 traffic signs, which gives an accuracy of 80%. This compares favorably to the accuracy on the test set of ...
 
 #### 3. Describe how certain the model is when predicting on each of the five new images by looking at the softmax probabilities for each prediction. Provide the top 5 softmax probabilities for each image along with the sign type of each probability. (OPTIONAL: as described in the "Stand Out Suggestions" part of the rubric, visualizations can also be provided such as bar charts)
 
-The code for making predictions on my final model is located in the 11th cell of the Ipython notebook.
 
-For the first image, the model is relatively sure that this is a stop sign (probability of 0.6), and the image does contain a stop sign. The top five soft max probabilities were
-
-| Probability         	|     Prediction	        					| 
-|:---------------------:|:---------------------------------------------:| 
-| .60         			| Stop sign   									| 
-| .20     				| U-turn 										|
-| .05					| Yield											|
-| .04	      			| Bumpy Road					 				|
-| .01				    | Slippery Road      							|
+The most probabale class predictions are reflected below 
 
 
-For the second image ... 
+![Image1prob](./writeup_images/Image1pred.png)
+![Image2prob](./writeup_images/Image2pred.png)
+![Image3prob](./writeup_images/Image3pred.png)
+![Image4prob](./writeup_images/Image4pred.png)
+![Image5prob](./writeup_images/Image5pred.png)
+
+
 
 ### (Optional) Visualizing the Neural Network (See Step 4 of the Ipython notebook for more details)
 #### 1. Discuss the visual output of your trained network's feature maps. What characteristics did the neural network use to make classifications?
