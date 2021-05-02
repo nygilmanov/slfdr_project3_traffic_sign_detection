@@ -231,10 +231,10 @@ The most probabale class predictions are reflected below
 
 
 ![Image1prob](./writeup_images/Image1pred.png)
-![Image2prob](./writeup_images/Image2pred.png)
-![Image3prob](./writeup_images/Image3pred.png)
-![Image4prob](./writeup_images/Image4pred.png)
-![Image5prob](./writeup_images/Image5pred.png)
+![Image2prob](./writeup_images/image2pred.png)
+![Image3prob](./writeup_images/image3pred.png)
+![Image4prob](./writeup_images/image4pred.png)
+![Image5prob](./writeup_images/image5pred.png)
 
 
 
