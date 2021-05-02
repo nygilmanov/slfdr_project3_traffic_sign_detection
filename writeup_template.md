@@ -184,6 +184,18 @@ Mainly was focused on hyperparameters tunning (num epochs,batch size etc.)
 - Number of epochs has been changed from 128 to 256. Finally has stopped with batch size 128 as was getting the higher performance.
 
 
+I have tried to play with the input data and build the model on the various sets 
+
+- tried to train on augmented balanced data (applied all transoframtions randomly which has been described above)
+  grayscale and normalization has been applied.
+- has randomly chosen original images from abalanced data set and dataset with original images plus augmented dataset
+- original data transformed to grayscale and normalized
+
+Finally I have got the best performance on the original dataset with data transformaed to grayscale and normalized
+
+
+
+
 * What are some of the important design choices and why were they chosen? For example, why might a convolution layer work well with this problem? How might a dropout layer help with creating a successful model?
 
 If a well known architecture was chosen:
