@@ -35,7 +35,6 @@ The goals / steps of this project are the following:
 ---
 ### Writeup / README
 
-#### 1. Provide a Writeup / README that includes all the rubric points and how you addressed each one. You can submit your writeup as markdown or pdf. You can use this template as a guide for writing the report. The submission includes the project code.
 
 You're reading it! and here is a link to my [project code](https://github.com/udacity/CarND-Traffic-Sign-Classifier-Project/blob/master/Traffic_Sign_Classifier.ipynb)
 
@@ -56,8 +55,8 @@ signs data set:
 #### 2. Exploratory visualization of the dataset.
 
 
-Let's look how the data looks like
-The below plot shows randomimages for each class
+Let's look how the data looks like.
+The below plot shows random images for each class
 
 ![Distribution](./writeup_images/alleexamples.png)
 
@@ -124,7 +123,7 @@ Affine transformation
 
 
 
-My final model consisted of the following layers:
+My final model (LeNet) consisted of the following layers:
 
 | Layer         		|     Description	        									| 
 |:---------------------:|:--------------------------------------------------------------| 
@@ -199,7 +198,7 @@ Here are five German traffic signs that I found on the web:
 
 For instance image Speed limit (80km/h) could be difficult to classify as the brightness and general quality of the images is not so good.
 
-#### 2. Discuss the model's predictions on these new traffic signs and compare the results to predicting on the test set. At a minimum, discuss what the predictions were, the accuracy on these new predictions, and compare the accuracy to the accuracy on the test set (OPTIONAL: Discuss the results in more detail as described in the "Stand Out Suggestions" part of the rubric).
+#### 2. Model's predictions on  new traffic signs and comparisson of  the results to predicting on the test set. 
 
 Here are the results of the prediction:
 
@@ -214,10 +213,10 @@ Here are the results of the prediction:
 
 The model was able to correctly guess 2 of the 5 traffic signs, which gives an accuracy of 40%. 
 This is not perfectly comapred with the accuracy on the test set.
-Seems model has not captures certain patters and there is a potential for improvement.
+Seems model has not captured certain patters and there is a potential for improvement.
 
 
-#### 3. Describe how certain the model is when predicting on each of the five new images by looking at the softmax probabilities for each prediction. Provide the top 5 softmax probabilities for each image along with the sign type of each probability. (OPTIONAL: as described in the "Stand Out Suggestions" part of the rubric, visualizations can also be provided such as bar charts)
+#### 3. Description on  how certain the model is when predicting on each of the five new images by looking at the softmax probabilities for each prediction. Provide the top 5 softmax probabilities for each image along with the sign type of each probability. 
 
 
 The most probabale class predictions are reflected below 
