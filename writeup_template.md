@@ -167,7 +167,8 @@ My final model results were:
 * validation set accuracy 0.951
 * test set accuracy of 0.933
 
-**DONE**
+![GrayScale](./writeup_images/learning.png)
+
 
 I have used LeNet() arcitecture from the very beginning.
 Haven't changed the arcitecture of the a model too much.
