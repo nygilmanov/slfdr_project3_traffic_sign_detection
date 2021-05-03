@@ -7,7 +7,7 @@
 
 **Build a Traffic Sign Recognition Project**
 
-**SECTION DONE**
+
 
 The goals / steps of this project are the following:
 * Load the data set (see below for links to the project data set)
@@ -43,7 +43,6 @@ You're reading it! and here is a link to my [project code](https://github.com/ud
 
 #### 1. Basic summary of the data set. 
 
-**SECTION DONE**
 
 I used the pandas library to calculate summary statistics of the traffic
 signs data set:
@@ -56,7 +55,6 @@ signs data set:
 
 #### 2. Exploratory visualization of the dataset.
 
-**SECTION DONE**
 
 Let's look how the data looks like
 The below plot shows randomimages for each class
@@ -70,7 +68,6 @@ Here is an exploratory visualization of the data set. It is a bar chart showing 
 
 ### Design and Test a Model Architecture
 
-**SECTION DONE**
 
 As a first step, I decided to convert the images to grayscale because usually 
 convolutions may capture patterns better from one channel data (reduce noise from the RGB data)
