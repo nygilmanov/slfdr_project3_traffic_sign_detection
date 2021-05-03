@@ -2,7 +2,6 @@
 
 ## Writeup
 
-### You can use this file as a template for your writeup if you want to submit it as a markdown file, but feel free to use some other method and submit a pdf if you prefer.
 
 ---
 
@@ -105,7 +104,7 @@ To fix this i have developed several methods:
 - Add images to complete number of images of certain class to the certain level (N_Images) 
 
 
-Here are possible combinations augmented images.
+Here are possible combinations of augmented images.
 
 Images Rotation
 
@@ -163,50 +162,32 @@ To train the model, I used the following parameters:
 #### 4. Description of the approach taken for finding a solution and getting the validation set accuracy to be at least 0.93. Include in the discussion the results on the training, validation and test sets and where in the code these were calculated. Your approach may have been an iterative process, in which case, outline the steps you took to get to the final solution and why you chose those steps. Perhaps your solution involved an already well known implementation or architecture. In this case, discuss why you think the architecture is suitable for the current problem.
 
 My final model results were:
-**TODO**
+
 * training set accuracy of 1.00 
 * validation set accuracy 0.951
 * test set accuracy of 0.933
 
 **DONE**
-If an iterative approach was chosen:
-* What was the first architecture that was tried and why was it chosen?
 
 I have used LeNet() arcitecture from the very beginning.
 Haven't changed the arcitecture of the a model too much.
 Mainly was focused on hyperparameters tunning (num epochs,batch size etc.)
 
-* What were some problems with the initial architecture?
-* How was the architecture adjusted and why was it adjusted? Typical adjustments could include choosing a different model architecture, adding or taking away layers (pooling, dropout, convolution, etc), using an activation function or changing the activation function. One common justification for adjusting an architecture would be due to overfitting or underfitting. A high accuracy on the training set but low accuracy on the validation set indicates over fitting; a low accuracy on both sets indicates under fitting.
-
-* Which parameters were tuned? How were they adjusted and why?
-
 - Number of epochs has been changed from 128 to 256. Finally has stopped with batch size 128 as was getting the higher performance.
 
-
-I have tried to play with the input data and build the model on the various sets 
+I have tried to play with the input data and build the model on the various transformed data sets 
 
 - tried to train on augmented balanced data (applied all transoframtions randomly which has been described above)
-  grayscale and normalization has been applied.
-- has randomly chosen original images from abalanced data set and dataset with original images plus augmented dataset
+  grayscale and normalization has been applied in the beginning.
+- has randomly chosen original images from the balanced data set and dataset with half original images plus half augmented dataset from original images
 - original data transformed to grayscale and normalized
 
 Finally I have got the best performance on the original dataset with data transformaed to grayscale and normalized
 
 
-
-
-* What are some of the important design choices and why were they chosen? For example, why might a convolution layer work well with this problem? How might a dropout layer help with creating a successful model?
-
-If a well known architecture was chosen:
-* What architecture was chosen? LeNet
-
 I have tried LeNet architecture as it has been used for similar problems before (for classification problems in particular)
 I have got quite good results on the validation and test sets as can be seen above.
 
-* Why did you believe it would be relevant to the traffic sign application?
-* How does the final model's accuracy on the training, validation and test set provide evidence that the model is working well?
- 
 
 ### Test a Model on New Images
 
@@ -218,8 +199,7 @@ Here are five German traffic signs that I found on the web:
 ![GrayScale](./writeup_images/5RandomImages.png)
 
 
-
-The first image might be difficult to classify because ...
+For instance image Speed limit (80km/h) could be difficult to classify as the brightness and general quality of the images is not so good.
 
 #### 2. Discuss the model's predictions on these new traffic signs and compare the results to predicting on the test set. At a minimum, discuss what the predictions were, the accuracy on these new predictions, and compare the accuracy to the accuracy on the test set (OPTIONAL: Discuss the results in more detail as described in the "Stand Out Suggestions" part of the rubric).
 
@@ -236,7 +216,7 @@ Here are the results of the prediction:
 
 The model was able to correctly guess 2 of the 5 traffic signs, which gives an accuracy of 40%. 
 This is not perfectly comapred with the accuracy on the test set.
-Seems model has not captures certain patters and this is the potential for improvement.
+Seems model has not captures certain patters and there is a potential for improvement.
 
 
 #### 3. Describe how certain the model is when predicting on each of the five new images by looking at the softmax probabilities for each prediction. Provide the top 5 softmax probabilities for each image along with the sign type of each probability. (OPTIONAL: as described in the "Stand Out Suggestions" part of the rubric, visualizations can also be provided such as bar charts)
